@@ -11,7 +11,7 @@
   :root{
     --ink:#000000; --panel:#0C0C0E; --line:#242428;
     --text:#F6F6F7; --muted:#8C8C93; --hot:#FF3D8A;
-    --slide-w: min(calc(100vw - 56px), 400px, calc(64svh * 0.462));
+    --slide-w: min(calc(100vw - 36px), 470px, calc(78svh * 0.462));
     --ease: cubic-bezier(.32,.72,0,1);
     color-scheme: dark;
   }
@@ -27,7 +27,7 @@
     overflow-x:hidden;
   }
   header{
-    padding:16px 20px 8px;
+    padding:13px 18px 4px;
     display:flex; align-items:center; justify-content:space-between;
     gap:14px; overflow:hidden; max-height:120px;
     transition:opacity .35s var(--ease), max-height .45s var(--ease), padding .45s var(--ease);
@@ -44,7 +44,7 @@
   .stage{position:relative; flex:1 1 auto; display:flex; align-items:center; min-height:0}
   .track{
     display:flex; align-items:center; gap:16px; width:100%;
-    padding:10px calc((100% - var(--slide-w)) / 2);
+    padding:6px calc((100% - var(--slide-w)) / 2);
     overflow-x:auto; overscroll-behavior-x:contain;
     scroll-snap-type:x mandatory; scrollbar-width:none;
     -webkit-overflow-scrolling:touch;
@@ -81,8 +81,8 @@
   .arrow svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
   @media (hover:hover) and (min-width:760px){ body.js .arrow{display:grid} }
   .rail{
-    padding:12px 20px 20px;
-    display:flex; flex-direction:column; align-items:center; gap:12px;
+    padding:8px 18px 14px;
+    display:flex; flex-direction:column; align-items:center; gap:9px;
     overflow:hidden; max-height:180px;
     transition:opacity .35s var(--ease), max-height .45s var(--ease), padding .45s var(--ease);
   }
@@ -102,7 +102,7 @@
   .thumb img{display:block;width:100%;height:auto;aspect-ratio:828/1792;border-radius:7px;background:var(--panel)}
   .thumb.is-active{opacity:1; box-shadow:0 0 0 2px var(--hot)}
   .thumb:focus-visible{outline:2px solid var(--hot); outline-offset:3px}
-  body.immersive{--slide-w: min(calc(100vw - 20px), calc(92svh * 0.462))}
+  body.immersive{--slide-w: min(calc(100vw - 12px), calc(96svh * 0.462))}
   body.immersive header, body.immersive .rail{opacity:0; max-height:0; padding-top:0; padding-bottom:0; pointer-events:none}
   body.immersive .slide{cursor:zoom-out}
   body.immersive .slide img{border-radius:16px}
